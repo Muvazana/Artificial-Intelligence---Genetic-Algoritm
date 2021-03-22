@@ -39,7 +39,7 @@ def getMinKromosom(population):
 
 if __name__ == '__main__':
     population_size = 10  # the individu will generate in one population
-    generation = 50  # the generation for generate solution
+    generation = 100  # the generation for generate solution
     xover_prob = 0.9
     mutation_prob = 0.01
 
@@ -68,6 +68,7 @@ if __name__ == '__main__':
             print(f"\t----------Mutasi----------")
             print(f"\tChild 1 Mutation : {krom_child_1} ({'Termutasi' if mutasi1 else 'Secure'})\n\tChild 2 Mutation : {krom_child_2} ({'Termutasi' if mutasi2 else 'Secure'})")
 
+        # Elitism Process
         worst_individual = getMinKromosom(new_population_list)
         new_population_list.remove(worst_individual)
         new_population_list.append(best_individual)
@@ -75,9 +76,7 @@ if __name__ == '__main__':
 
     print(f"*--------------------------------Generation {gene + 1}--------------------------------*")
     showPopulation(population_list)
-    # add best individu ke newPop untuk dijadikan generasi baru / proses elitisme
     best_individual = getBestKromosom(population_list)
-    # newPop.append(bstIndividual)
     print(f"----------Best Kromosom for Generation {gene + 1}----------")
     print(f"Fitness\t\t: {best_individual['fitness']:.3f}")
     print(f"Kromosom\t: {best_individual['kromosom']}")
