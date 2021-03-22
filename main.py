@@ -83,17 +83,3 @@ if __name__ == '__main__':
     print(f"Kromosom\t: {best_individual['kromosom']}")
     x, y = utl.decodeForBinary(interval_x=utl.interval_x_y[0], interval_y=utl.interval_x_y[1], kromosom=best_individual['kromosom'])
     print(f"x : {x}\ny : {y}")
-
-
-# if __name__ == '__main__':
-#     list = [{'fitness': 20, 'kromosom': [1,2,3,4,5]}, {'fitness': 10, 'kromosom': [5,4,3,2,1]}, {'fitness': 17, 'kromosom': [6,7,8,9,10]}]
-#
-#     max = max(list, key=lambda x: x['fitness'])
-#
-#     print(list)
-#     print(list.remove(max))
-#     print(list)
-#     for i in range():
-#         print(i)
-#         if i > 10:
-#             break
