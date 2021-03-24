@@ -5,7 +5,7 @@ import matplotlib.pyplot as mpl
 import Utils as utl
 
 
-# POPULATION    == GENERATION
+# POPULATION    is GENERATION
 # POPULATION    contain List of INDIVIDUAL
 # INDIVIDUAL    contain Fitness and KROMOSOM
 # KROMOSOM      contain List of GEN
@@ -39,7 +39,7 @@ def getMinKromosom(population):
 
 if __name__ == '__main__':
     population_size = 10  # the individu will generate in one population
-    generation = 100  # the generation for generate solution
+    generation = 30  # the generation for generate solution
     xover_prob = 0.9
     mutation_prob = 0.01
 
@@ -82,3 +82,7 @@ if __name__ == '__main__':
     print(f"Kromosom\t: {best_individual['kromosom']}")
     x, y = utl.decodeForBinary(interval_x=utl.interval_x_y[0], interval_y=utl.interval_x_y[1], kromosom=best_individual['kromosom'])
     print(f"x : {x}\ny : {y}")
+
+
+# if __name__ == '__main__':
+#     print(np.random.random())

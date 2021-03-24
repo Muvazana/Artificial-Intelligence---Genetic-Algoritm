@@ -32,7 +32,6 @@ def decodeForBinary(interval_x, interval_y, kromosom):
     pengali_x = 0  # sum(i=1 to N; g_i^-i) for x
     pengali_y = 0  # sum(i=1 to N; g_i^-i) for y
 
-
     for i in range(len(kromosom)//2):
         pembagi += 2 ** -(i+1)
         pengali_x += krom_x[i] * 2 ** -(i+1)
@@ -75,6 +74,5 @@ def mutasiBiner(kromosom, prob):
             mutated_krom.append(0 if kromosom[i] == 1 else 1)
         else:
             mutated_krom.append(kromosom[i])
-
 
     return mutated_krom, mutasi
