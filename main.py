@@ -1,6 +1,4 @@
-import numpy as np
 from beautifultable import BeautifulTable
-import matplotlib.pyplot as mpl
 
 import Utils as utl
 
